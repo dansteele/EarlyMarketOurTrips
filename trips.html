@@ -4,6 +4,30 @@ $(document).ready(function(){
 	$(el).css({"list-style-type":"none", "margin-bottom":"35px"})
 	console.log(el)
 })
+var footerId = "#share"
+
+$("body").css({"background-color": "#771d38"})
+
+$(document).ready(function(){
+  $("main").children().hide();
+  $(footerId).hide();
+  showEl($("main").children(), 0, footerId);
+});
+
+function showEl(elArray, index, footerId) {
+  $($(elArray)[index]).fadeIn(700, function() {
+    index++;
+    if (index < elArray.length) {
+      showEl(elArray, index, footerId) 
+    } else {
+      showFooter(footerId);
+    }
+  })
+}
+
+function showFooter(id) {
+ $(id).fadeIn(500)
+}
 </script>
 <style type="text/css">#no-list-style{
   list-style-type: none;
@@ -68,6 +92,7 @@ h2 {
 	width: 22%;
 }
 </style>
+<main>
 <h1 class="large-bottom-padding">Our Trips</h1>
 
 <ul id="no-list-style">
@@ -130,3 +155,4 @@ h2 {
         </div>
     </li>
 </ul>
+</main>
