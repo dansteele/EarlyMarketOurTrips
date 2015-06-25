@@ -3,28 +3,23 @@ $(document).ready(function(){
 	var el = $("#no-list-style > li")
 	$(el).css({"list-style-type":"none", "margin-bottom":"35px"})
 	console.log(el)
-})
-var footerId = "#share"
-
-$("body").css({"background-color": "#771d38"})
-
-$(document).ready(function(){
   $("main").children().hide();
   $(footerId).hide();
   showEl($("main").children(), 0, footerId);
-});
-
 function showEl(elArray, index, footerId) {
   $($(elArray)[index]).fadeIn(700, function() {
     index++;
     if (index < elArray.length) {
-      showEl(elArray, index, footerId) 
-    } else {
+        showEl(elArray, index, footerId) 
+    } 
+    else {
       showFooter(footerId);
     }
   })
 }
-
+})
+var footerId = "#share"
+$("body").css({"background-color": "#771d38"})
 function showFooter(id) {
  $(id).fadeIn(500)
 }
