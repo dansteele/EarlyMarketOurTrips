@@ -1,6 +1,6 @@
 <script type="text/javascript">
 	$(document).ready(function(){
-		var ul = $("#no-text-dec > a")
+		var ul = $(".link-format")
 		$(ul).css({"text-decoration":"none", "color": "#771d38", "font-weight":"bold", "font-family": "Lane"})
 		console.log(ul)
 	})
@@ -30,24 +30,32 @@
 	background-color: #C8C8C8;
 }
 .img-container{
-	width: 203px;
-	height: 203px;
+	width: 100%;
+
+}
+.text-style{
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	padding-left: 2.55em;
+	color: black;
 }
 .map-style{
-	width: 100%;
-	height: 100%;
+	width: 120%;
+
 }
-.link-format{
-	text-decoration: none;
-	color: #771d38;
-	font-weight: bold;
-	font-family: lane;
+.align-center{
+	text-align: center;
+}
+.medium-top-padding {
+  	margin-top: 40px;
+}
+.small-logo-central{
+	width: 30%;
+	margin-left: auto;
+	margin-right: auto;
 }
 td{
-	padding-right: 40px;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	padding-left: 20px;
+	padding-right: 0.5em;
 }
 
 
@@ -58,9 +66,17 @@ td{
 <table class="table">
 <tr class="row1">
 	<td><div class="img-container"><img class="map-style" src="http://helipaddy.com/assets/images/trips/south-east-tour-map.png" /></div></td>
-	<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet vitae nisl eu egestas. Nullam efficitur eget diam eu suscipit. Nam ligula risus, accumsan nec egestas vitae, egestas a turpisnim ullamcorper vitae. Cras dapibus accumsan mollis. Integer pulvinar nisl ac sem lobortis accumsan. Proin eu varius turpis, at posuere nisl. Aliquam ac lacus id metus sodales posuere. Quisque at orci eros. Nullam in viverra velit.</td><td class="link-format" style="text-align: center"><a href="helipaddy.com/trips/SouthEast">view details</a></td>
+	<td class="text-style"><span style="font-size: larger"><a class="link-format" href="trips/south-east"><u>England at its Best</u></a></span><br>Re-discover some of the most famous landmarks our country has to offer with this itinerary around the South-East. Enjoy a unique perspective on the distinctive history and culture of England by flying over London and its monuments, as well as other stunning sights such as Leeds Castle and Stonehenge. Take relaxing breaks in our hand-picked heli-friendly establishments.</td>
 </tr>
 <tr class='row2'>
-	<td><div class="img-container"><img class="map-style" src="http://helipaddy.com/assets/images/trips/wineries-tour-map.png" /></div></td><td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet vitae nisl eu egestas. Nullam efficitur eget diam eu suscipit. Nam ligula risus, accumsan nec egestas vitae, egestas a turpisnim ullamcorper vitae. Cras dapibus accumsan mollis. Integer pulvinar nisl ac sem lobortis accumsan. Proin eu varius turpis, at posuere nisl. Aliquam ac lacus id metus sodales posuere. Quisque at orci eros. Nullam in viverra velit.</td><td class="link-format" style="text-align: center"><a href="helipaddy.com/trips/Wineries">view details</a></td>
+	<td><div class="img-container"><img class="map-style" src="http://helipaddy.com/assets/images/trips/wineries-tour-map.png" /></div></td>
+	<td class="text-style"><span style="font-size: larger"><a class="link-format" href="trips/wineries-tour"><u>Une Escapade aux Châteaux</u></a></span><br>Our French châteaux tour is a fantastic opportunity to discover the breathtaking regions of Normandy, Loire, Bourgogne and Champagne. Embark on this journey to fly over an array of stunning châteaux, as well as the historical D-day beaches and the Circuit des 24 Heures from the famous Le Mans race. Stop at our selection of exceptional heli-friendly establishments for meals, accommodation and even a wine-tasting session.</td>
+</tr>
+<tr class='row1'>
+	<td><div class="img-container"><img class="map-style" src="http://helipaddy.com/assets/images/trips/scandinavia-map.png" /></div></td>
+	<td class="text-style"><span style="font-size: larger"><a class="link-format" href="trips/scandinavia"><u>Breathtaking Scandinavia</u></a></span><br>In collaboration with the experienced Prepare2Go team, this heli-only expedition is an exceptional opportunity to discover some of the most remote and untarnished locations in Scandinavia. Embark on this adventure into the Scandinavian wilderness and enjoy breathtaking scenery under the almost permanent sunlight of the Northern summer. Absorb the surrounding environment as you camp near lakes, rivers, and mountains.</td>
 </tr>
 </table>
+<div class="align-center medium-top-padding">
+	<img class="small-logo-central" src="http://helipaddy.com/assets/images/Powered_By_Helipaddy.png">
+</div>
