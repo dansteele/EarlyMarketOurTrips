@@ -1,0 +1,262 @@
+<style type="text/css">
+.table-head{
+	display: table-header-group;
+	vertical-align: middle;
+	color: black;
+	background-color: #EEE;
+	font-family: arial;
+}
+.table-cells, td, th {
+	border: 1px solid #CCC;
+	padding: 1em;
+}
+.table-style{
+	border-collapse: collapse;
+	text-align: center;
+}
+.example-box {
+  position: relative;
+  margin: 15px 0;
+  padding: 39px 19px 14px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 20px;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre;
+  white-space: pre-wrap;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.example-box:after {
+  content: "Example";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #f5f5f5;
+  font-family: Arial;
+  border: 1px solid #ddd;
+  color: #9da0a4;
+  -webkit-border-radius: 4px 0 4px 0;
+  -moz-border-radius: 4px 0 4px 0;
+  border-radius: 4px 0 4px 0;
+}
+h3 {
+	font-weight: bold;
+	font-family: arial;
+}
+h1{
+	text-align: center;
+	font-family: Arial;
+	font-weight: bold;
+}
+p{
+	font-family: arial;
+	line-height: 1.5em;
+}
+code {
+	color: black;
+	padding: 2px 4px;
+	background-color: #f5f5f5;
+	border: 1px solid #B1B1B1;
+	border-radius: 4px;
+	margin-left: 50px;
+}
+</style>
+<main style="margin: 15em">
+<h1>Api requests</h1>
+<h3>Specific Site Request</h3>
+<p>Request URLs for thumbnail look up are in the following format:<br>
+</p>
+<code>api.helipaddy.com/sites/N</code>
+<p>With an Api-Key XXXXXXXXXX as a header.</p>
+<p><i>Parameters:</i><br>
+N = dec value pad number<br></p>
+<div class="example-box">
+<pre>
+api.helipaddy.com/sites/15
+</pre>
+</div>
+<h3>All Sites Request</h3>
+<p>Request URLs for thumbnail look up are in the following format:<br>
+</p>
+<code>api.helipaddy.com/sites/</code>
+<p>With an Api-Key XXXXXXXXXX as a header.</p>
+<div class="example-box">
+<pre>
+api.helipaddy.com/sites/
+</pre>
+</div>
+<p>
+<br>
+<table class="table-style" style="width: 70%; margin-left: 15em; margin-bottom: 3em; margin-top: 3em">
+  <thead class="table-head"><tr><th>Key</th><th>Value</th><th>Example</th><th>Description</th></tr></thead>
+  <tr><td>tags</td><td>"string"</td><td>"HCGB"</td><td>?</td></tr>
+  <tr><td>ss</td><td>integer</td><td>0</td><td>?</td></tr>
+  <tr><td>access_type</td><td>integer</td><td>0</td><td>?</td></tr>
+  <tr><td>consumer_id</td><td>integer</td><td>0</td><td>?</td></tr>
+</table>
+An example of returned data (JSON format):</p>
+<div class="example-box">
+<pre>
+{
+    "status": {
+        "code": "success"
+    },
+    "data": {
+        "id": 15,
+        "latitude": 51.304986,
+        "longitude": -0.438429,
+        "category": "Pub",
+        "longName": "The Black Swan",
+        "helipaddyRating": 0,
+        "email": "enquiries@blackswanockham.com",
+        "moderator": "",
+        "website": "blackswanockham.com",
+        "specialInstructions": "Pub and restaurant in the idyllic Surrey countryside.\n- serves fresh local and seasonal produce - Courtesy of helipaddy.com",
+        "landingInformation": "You may land on the grass to the north east of the car park.\n- previous landing site\n- no fee",
+        "internalNote": "",
+        "privateMessage": "",
+        "phoneNumber": "+44 1932 862364",
+        "landingFees": "",
+        "startDate": 0,
+        "expiryDate": 0,
+        "submittedBy": 128,
+        "submittedByConsumer": 0,
+        "originalPad": 0,
+        "tags": "HCGB",
+        "moderated": true,
+        "landingNotPermitted": false,
+        "addedDate": 1413500400000,
+        "dmsFormat": "51° 18' 18\"N, 0° 26' 18\"W",
+        "approximateLocation": "Ockham Lane, Cobham, Surrey KT11, UK",
+        "contact": "",
+        "countryCode": "",
+        "areaCode": "",
+        "winterClosing": "",
+        "summerClosing": "",
+        "ss": 0,
+        "last_updated_at": 1435154597000,
+        "photo": "pad-15.jpg",
+        "postcode": "KT11 1NG",
+        "iko": "",
+        "access_type": 0,
+        "consumer_id": 0,
+        "county": "Surrey",
+        "country": "GB",
+        "sharedPad": false,
+        "considerInclusion": false,
+        "APIaccess": true,
+        "isNotHP": false,
+        "isNotAA": false,
+        "isNotHS": false,
+        "isNotAD": true,
+        "views_count": 1,
+        "twitter_handle": "",
+        "ta_price_level": "",
+        "ta_rating": "",
+        "ta_web_url": "",
+        "warnings": [
+            ""
+        ],
+        "facilities": [
+            ""
+        ],
+        "privatePad": false,
+        "comments": [
+            {
+                "id": 37,
+                "consumer_id": 9,
+                "site_id": 15,
+                "comment": "Super chilled about landing and possibly a consideration for Helipaddy Selected which requires that there be no PPR.\nRidiculously easy to find because it is at the end of Wisley disused runway.",
+                "is_positive": true,
+                "submitted": 1403428277000,
+                "inappropriate": false,
+                "consumer": [
+                    {
+                        "id": "9",
+                        "forename": "Paddy",
+                        "surname": "Wills",
+                        "nickname": "iPhone6",
+                        "newsletter": "0"
+                    }
+                ]
+            },
+            {
+                "id": 167,
+                "consumer_id": 317,
+                "site_id": 15,
+                "comment": "good one!",
+                "is_positive": true,
+                "submitted": 1423493639000,
+                "inappropriate": false,
+                "consumer": [
+                    {
+                        "id": "317",
+                        "forename": "sergiu",
+                        "surname": "doruc",
+                        "nickname": "unq",
+                        "newsletter": "0"
+                    }
+                ]
+            },
+            {
+                "id": 195,
+                "consumer_id": 67,
+                "site_id": 15,
+                "comment": "Very laid back - \"any time, no PPR, no fee\".\nDead easy to find, caution the horses in adjacent fields.",
+                "is_positive": true,
+                "submitted": 1429952473000,
+                "inappropriate": false,
+                "consumer": [
+                    {
+                        "id": "67",
+                        "forename": "Roy",
+                        "surname": "Murphy",
+                        "nickname": "toptobottom",
+                        "newsletter": "1"
+                    }
+                ]
+            },
+            {
+                "id": 199,
+                "consumer_id": 193,
+                "site_id": 15,
+                "comment": "Busy day Monday 3 Helis on the pad.\nAll staff helpful and good value.",
+                "is_positive": true,
+                "submitted": 1431469219000,
+                "inappropriate": false,
+                "consumer": [
+                    {
+                        "id": "193",
+                        "forename": "richard",
+                        "surname": "hubbard ",
+                        "nickname": "richub",
+                        "newsletter": "1"
+                    }
+                ]
+            }
+        ],
+        "events": [],
+        "consumer": []
+    }
+}
+</pre>
+</div>
+</main>
