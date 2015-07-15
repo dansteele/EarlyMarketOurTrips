@@ -1,0 +1,148 @@
+<script type="application/javascript">
+var footerId = "#share"
+
+$("body").css({"background-color": "#771d38"})
+
+$(document).ready(function(){
+  $("main").children().hide();
+  $(footerId).hide();
+  showEl($("main").children(), 0, footerId);
+});
+
+function showEl(elArray, index, footerId) {
+  $($(elArray)[index]).fadeIn(400, function() {
+    index++;
+    if (index < elArray.length) {
+      showEl(elArray, index, footerId) 
+    } else {
+      showFooter(footerId);
+    }
+  })
+}
+
+function showFooter(id) {
+ $(id).fadeIn(500)
+}
+</script>
+
+<style>
+.column {
+  -webkit-column-width: 20em;
+  -webkit-column-gap: 2em;
+  -webkit-column-count: 2;
+  -moz-column-width: 20em;
+  -moz-column-gap: 2em;
+  -moz-column-count: 2;
+  -ms-column-width: 20em;
+  -ms-column-gap: 2em;
+  -ms-column-count: 2;
+  column-width: 20em;
+  column-gap: 2em;
+  column-count: 2;
+}
+
+.lede {
+  font-size: 1.1rem;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.small-square {
+  width: 38%;
+}
+
+.large-width {
+  width: 90%;
+}
+
+.t-med-large {
+  font-size: 1.2rem;
+}
+
+.med-margin {
+  margin: 5%;
+}
+
+.half-width {
+  width: 49%;
+}
+
+.three-quarters-width {
+  width: 75%;
+}
+
+.max-width {
+  width: 100%;
+}
+
+.med-padding-top {
+  padding-top: 5%
+}
+
+.large-padding-top {
+  padding-top: 7%;
+}
+
+.negative-margin-bottom {
+  margin-bottom: -50px;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.block {
+  display: block;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.heli-purple {
+  background-color: #771D38;
+}
+
+.fancy-circle {
+  border-radius: 50%;
+  width: 50%;
+  margin: auto;
+}
+
+</style>
+<main>
+  <p class="lede t-center">The Helipaddy team want to develop mutually beneficial relationships with like-minded organizations that serve the interests of our community of pilots. Our model of extensive landing sites and rich pool of certified pilots can compliment the existing offering of other organisations.</p>
+
+  <div class="column">
+    <span class="center">
+      <img class="large-padding-top fancy-circle block" src="http://helipaddy.com/assets/images/partners/offers.jpg"/>
+      <span class="t-center block t-med-large">Promote your offers</span>
+    </span>
+    <span>
+      <img class="large-padding-top fancy-circle block" src="http://helipaddy.com/assets/images/partners/champagne.jpg"/>
+      <span class="t-center block t-med-large">Promote your events</span>
+    </span>
+    <span>
+      <img class="large-padding-top fancy-circle block" src="http://helipaddy.com/assets/images/partners/website.jpg"/>
+      <span class="t-center block t-med-large">Create and promote microsites</span>
+    </span>
+    <span>
+      <img class="large-padding-top fancy-circle block" src="http://helipaddy.com/assets/images/partners/advertising.jpg"/>
+      <span class="t-center block t-med-large">Advertise on our website</span>
+    </span>
+      
+  </div>
+  <video loop class="med-padding-top fancy-circle block three-quarters-width" autoplay="autoplay" muted="muted" poster="https://www.paypalobjects.com/webstatic/en_GB/mktg/wright/videos/uk-brand-campaign.jpg" style="height: auto; visibility: visible;">
+      <source src="https://www.paypalobjects.com/webstatic/en_GB/mktg/wright/videos/uk-brand-campaign.mp4" type="video/mp4">
+      <source src="https://www.paypalobjects.com/webstatic/en_GB/mktg/wright/videos/uk-brand-campaign.webm" type="video/webm">
+  </video>
+  <span class="t-center block t-med-large large-padding-top">Collaborate on trip planning and create bespoke itineraries</span>
+  <hr class="negative-margin-bottom">
+  
+</main>
