@@ -26,7 +26,7 @@ function showFooter(id) {
 }
 
 function createCounter() {
-  var numAnim = new CountUp("counter", 0, 14000, 0, 8);
+  var numAnim = new CountUp("counter", 0, 5233, 0, 8);
   numAnim.start(function(){
     var intervalID = window.setInterval(numAnim.update(parseInt($("#counter").html()) + 1), 10000);
   });
